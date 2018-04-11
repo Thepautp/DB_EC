@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411081905) do
+ActiveRecord::Schema.define(version: 20180411082428) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "zip"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20180411081905) do
     t.string "fn_furigana"
     t.string "ln_furigana"
     t.integer "address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fukens", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
