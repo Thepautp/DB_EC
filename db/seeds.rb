@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require_relative 'fuken.rb'
+require_relative 'order_status.rb'
