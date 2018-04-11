@@ -1,0 +1,2 @@
+class CatTypeMapping < ApplicationRecord
+end

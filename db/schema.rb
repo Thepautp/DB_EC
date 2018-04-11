@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411084349) do
+ActiveRecord::Schema.define(version: 20180411090400) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "zip"
     t.integer "fuken_id"
     t.string "addr_1"
     t.string "addr_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cat_type_mappings", force: :cascade do |t|
+    t.integer "prod_categorie_id"
+    t.integer "prod_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
