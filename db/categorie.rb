@@ -1,7 +1,7 @@
 prod_categorie_list = [
   "informatique", "Image et son", "Telephonie", "Jeux et loisirs",
-  "Objects connectes", "Consommables", "Connectique", "Cartouches et toners"
+  "Objects connectes", "Consommables", "Connectique"
 ]
 prod_categorie_list.each do |cat|
-  Prod_categorie.create(name: cat)
+  ProdCategorie.create(name: cat)
 end
