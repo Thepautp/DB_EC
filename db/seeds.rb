@@ -8,3 +8,4 @@
 
 require_relative 'fuken.rb'
 require_relative 'order_status.rb'
+require_relative 'categorie.rb'
