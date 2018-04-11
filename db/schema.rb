@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411081037) do
+ActiveRecord::Schema.define(version: 20180411081905) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "zip"
+    t.integer "fuken_id"
+    t.string "addr_1"
+    t.string "addr_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "email"
