@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412053412) do
+ActiveRecord::Schema.define(version: 20180412055033) do
 
-  create_table "customer_address", force: :cascade do |t|
+  create_table "customer_addresses", force: :cascade do |t|
     t.string "zip"
     t.integer "fuken_id"
     t.string "addr_1"
