@@ -1,3 +1,3 @@
 class ProdType < ApplicationRecord
-  has_one :ProdCategorie
+  belongs_to :prod_categorie
 end
