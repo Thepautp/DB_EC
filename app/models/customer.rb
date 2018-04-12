@@ -1,3 +1,4 @@
 class Customer < ApplicationRecord
   has_many :orders
+  has_one :address, dependent: :destroy
 end
