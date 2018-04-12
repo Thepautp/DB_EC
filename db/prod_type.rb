@@ -27,43 +27,36 @@ type_for_connectique = [
 ]
 
 type_for_informatique.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "informatique").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "informatique").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_image_et_son.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Image et son").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Image et son").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_telephonie.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Telephonie").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Telephonie").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_jeux.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Jeux et loisirs").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Jeux et loisirs").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_objects_connectes.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Objects connectes").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Objects connectes").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_consommables.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Consommables").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Consommables").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
 
 type_for_connectique.each do |type|
-   a = ProdType.create(name: type)
-   cat_id = ProdCategorie.where(name: "Connectique").first.id
-   CatTypeMapping.create(prod_categorie_id: cat_id, prod_type_id: a.id)
+  cat_id = ProdCategorie.where(name: "Connectique").first.id
+  a = ProdType.create(name: type, prod_categorie_id: cat_id)
 end
