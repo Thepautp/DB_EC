@@ -11,11 +11,10 @@
         <% c.orders.each do |o| %>
           <tr>
             <td><%= o.id%></th>
-            <td><%= o.order_amount %></th>
+            <td><%= o.order_amount.round(2) %></th>
             <td><%= o.order_status.name %></th>
             <td>
               <table class="details_table">
-                <% c.orders.each do |o| %>
                   <tr>
                     <th>Index</th>
                     <th>Product</th>
@@ -30,7 +29,6 @@
                       <td><%= d.price %></td>
                     </tr>
                   <% end %>
-                <% end %>
               </table>
             </td>
           </tr>
