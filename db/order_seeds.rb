@@ -6,7 +6,7 @@ customers.each do |c|
   if number_of_order > 0
     number_of_order.times do
       number_of_product = rand(8)+1
-      o = c.orders.create()
+      o = c.orders.create(order_status_id: 1)
       number_of_product.times do 
         rand_id = rand(all_product.count)
         chosen_product = all_product[rand_id]
