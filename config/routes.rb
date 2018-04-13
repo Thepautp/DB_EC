@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   
   get 'home_page/home'
 
-  get 'suppliers/index'
+  get 'suppliers/index', to: "suppliers#index"
 
   get 'suppliers/show'
 
-  get 'customers/index'
+  get 'customers/index', to: "customers#index"
 
   get 'customers/show'
 

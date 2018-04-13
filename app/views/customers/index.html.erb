@@ -1,2 +1,40 @@
-<h1>Customers#index</h1>
-<p>Find me in app/views/customers/index.html.erb</p>
+<% @customers.each do |c| %>
+  <h2>Customer:<%= c.id %> <%= c.first_name %> <%= c.last_name %> </h2>
+  <div class="customer">
+    <table class="orders_table">
+      <tr>
+        <th>Order number</th>
+        <th>Total price</th>
+        <th>Order status</th>
+        <th>Order details</th>
+      </tr>
+        <% c.orders.each do |o| %>
+          <tr>
+            <td><%= o.id%></th>
+            <td><%= o.order_amount %></th>
+            <td><%= o.order_status.name %></th>
+            <td>
+              <table class="details_table">
+                <% c.orders.each do |o| %>
+                  <tr>
+                    <th>Index</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                  <% o.order_details.each_with_index do |d,i| %>
+                    <tr>
+                      <td><%= i+1 %></td>
+                      <td><%= d.product.name %></td>
+                      <td><%= d.quantity %></td>
+                      <td><%= d.price %></td>
+                    </tr>
+                  <% end %>
+                <% end %>
+              </table>
+            </td>
+          </tr>
+        <% end %>
+    </table>
+  </div>
+<% end %>
