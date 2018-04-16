@@ -1,2 +1,9 @@
-<h1>Suppliers#show</h1>
-<p>Find me in app/views/suppliers/show.html.erb</p>
+<div class="supplier_wrap">
+  <p>name: <%= @supplier.name %></p>
+  <p>email: <%= @supplier.email %></p>
+  <p>zip: <%= @supplier.supplier_address.zip %></p>
+  <p>fuken: <%= @supplier.supplier_address.fuken.name %></p>
+  <p>address: <%= @supplier.supplier_address.addr_1 %></p>
+  <p>address: <%= @supplier.supplier_address.addr_2 %></p>
+  
+</div>

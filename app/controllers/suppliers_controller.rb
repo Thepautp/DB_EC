@@ -3,5 +3,6 @@ class SuppliersController < ApplicationController
   end
 
   def show
+    @supplier = Supplier.find_by(id: params[:id])
   end
 end
