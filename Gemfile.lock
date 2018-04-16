@@ -62,6 +62,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    data-table (2.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
@@ -190,6 +191,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  data-table
   jbuilder (~> 2.5)
   kaminari
   listen (>= 3.0.5, < 3.2)
