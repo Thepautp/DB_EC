@@ -1,7 +1,6 @@
 class CustomersController < ApplicationController
   def index
-    puts "coucou"
-    @customers = Customer.all
+    @customers = Customer.order(:id).page params[:page]
   end
 
   def show
