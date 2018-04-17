@@ -1,9 +1,34 @@
 <div class="supplier_wrap">
-  <p>name: <%= @supplier.name %></p>
-  <p>email: <%= @supplier.email %></p>
-  <p>zip: <%= @supplier.supplier_address.zip %></p>
-  <p>fuken: <%= @supplier.supplier_address.fuken.name %></p>
-  <p>address: <%= @supplier.supplier_address.addr_1 %></p>
-  <p>address: <%= @supplier.supplier_address.addr_2 %></p>
-  
+  <div class="supplier_info">
+    <p>name: <%= @supplier.name %></p>
+    <p>email: <%= @supplier.email %></p>
+    <p>zip: <%= @supplier.supplier_address.zip %></p>
+    <p>fuken: <%= @supplier.supplier_address.fuken.name %></p>
+    <p>address: <%= @supplier.supplier_address.addr_1 %></p>
+    <p>address: <%= @supplier.supplier_address.addr_2 %></p>    
+  </div>
+  <div class="supplier_product">
+    <table class="sup_prod_table">
+      <tr>
+        <tr>      
+            <th>Name</th>
+            <th>price</th>
+            <th>stock</th>
+            <th>weight</th>
+            <th>categorie</th>
+            <th>type</th>
+        </tr>  
+      </tr>
+    <% @supplier.products.each do |prod| %>
+      <tr class="product_td">
+        <td><%= prod.name %></td>
+        <td><%= prod.price %></td>
+        <td><%= prod.stock %></td>
+        <td><%= prod.weight %></td>
+        <td><%= prod.prod_categorie.name %></td>
+        <td><%= prod.prod_type.name %></td>
+      </tr>
+    <% end %>
+  </table>
+  </div>
 </div>

@@ -26,7 +26,7 @@
         <th>address</th>
     </tr>
     <tr>
-      <td><%= @product.supplier.name %></td>
+      <td><%= link_to @product.supplier.name, suppliers_show_path(@product.supplier)%></td>
       <td><%= @product.supplier.email %></td>
       <td><%= @product.supplier.supplier_address.fuken.name %></td>
       <td><%= @product.supplier.supplier_address.zip %></td>
