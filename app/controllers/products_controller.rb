@@ -4,5 +4,6 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find_by_id(params[:format].to_i)
   end
 end

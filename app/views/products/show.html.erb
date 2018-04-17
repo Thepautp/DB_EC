@@ -1,2 +1,36 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="products_show_wrap">
+  <table class="first_table">
+    <tr>      
+        <th>Name</th>
+        <th>price</th>
+        <th>stock</th>
+        <th>weight</th>
+        <th>categorie</th>
+        <th>type</th>
+    </tr>  
+    <tr class="product_td">
+      <td><%= @product.name %></td>
+      <td><%= @product.price %></td>
+      <td><%= @product.stock %></td>
+      <td><%= @product.weight %></td>
+      <td><%= @product.prod_categorie.name %></td>
+      <td><%= @product.prod_type.name %></td>
+    </tr>
+  </table>
+  <table class="second_table">
+    <tr>      
+        <th>Name</th>
+        <th>email</th>
+        <th>fuken</th>
+        <th>ZIP</th>
+        <th>address</th>
+    </tr>
+    <tr>
+      <td><%= @product.supplier.name %></td>
+      <td><%= @product.supplier.email %></td>
+      <td><%= @product.supplier.supplier_address.fuken.name %></td>
+      <td><%= @product.supplier.supplier_address.zip %></td>
+      <td><%= @product.supplier.supplier_address.addr_1 %> <%= @product.supplier.supplier_address.addr_2 %></td>
+    </tr>  
+  </table>
+</div>
