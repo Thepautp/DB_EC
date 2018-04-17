@@ -1,2 +1,20 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<div class="products_wrap">
+  <table class="prod_table">
+    <tr>      
+        <th>Name</th>
+        <th>price</th>
+        <th>stock</th>
+        <th>weight</th>
+        <th>supplier</th>
+    </tr>
+    <% @products.each do |p| %>
+      <tr class="product_td">
+        <td><%= link_to p.name, products_show_path(p) %></td>
+        <td><%= p.price %></td>
+        <td><%= p.stock %></td>
+        <td><%= p.weight %></td>
+        <td><%= p.supplier.name %></td>
+      </tr>
+    <% end %> 
+  </table>
+</div>

@@ -1,3 +1,16 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.prod_table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #4f9f99;
+  text-align: center;
+}
+.product_td a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;  
+}
