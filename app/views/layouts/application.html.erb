@@ -3,13 +3,16 @@
   <head>
     <title>DBProject</title>
     <%= csrf_meta_tags %>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div id="wrapper">
+      <div class="logo">
+        <h1>ECC Database training</h1>
+      </div>
       <%= yield %>
     </div>
   </body>

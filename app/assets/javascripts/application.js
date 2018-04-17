@@ -13,3 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+$( document ).ready(function() {
+  $(".dropdown_th").hover(function(){
+      $(this).find('div').addClass("selected_dropdown");
+    }, function() {
+      $(this).find('div').removeClass("selected_dropdown");
+    });
+});

@@ -21,11 +21,13 @@ table {
 th,td,tr {
   border-collapse: collapse;
   border: 1px solid #4f9f99;
+  padding: 5px;
 }
-.details_table {
-  margin: 5px;
-}
+
 #wrapper {
-  width: 70%;
+  width: 80%;
   margin: auto;
+}
+.logo {
+  text-align: center;
 }

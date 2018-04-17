@@ -1,6 +1,24 @@
-<h1>Database Test</h1>
-<p>Choose an action:</p>
-<div class="all_action">
-  <%= button_to "Customer", customers_index_path, method: :get, class: "btn"%>
-  <%= button_to "Supplier", suppliers_index_path, method: :get, class: "btn"%>
+<div class="home_wrap">
+  
+  <table class="ecc_table">
+    <tr class="dropdown">
+      <% @categories.each_with_index do |c,i| %>
+        <th class="dropdown_th">
+          <%= c.name %>
+          <div class="dropdown_type">
+            <% c.prod_types.each do |t| %>
+              <%= link_to t.name, products_index_path(t.id) %>
+            <% end %>
+          </div>
+        </th>
+      <% end %>
+    </tr>
+  </table>
+  <div class="ninki_product">
+    Display the most order product
+  </div>
+  <div class="last_chance_product">
+    Display products that will be  soon out of stock
+  </div>
+
 </div>
