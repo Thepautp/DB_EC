@@ -13,10 +13,53 @@
       <% end %>
     </tr>
   </table>
+  <div class="ninku_title">
+    Best seller
+  </div>
   <div class="ninki_product">
-    Display the most order product
+    <div class="best_seller">
+      <div class="prod_head">
+        <%= @best_seller.name %>
+      </div>
+      <div class="prod_body">
+        <div><%= @best_seller.price %> $</div>
+        <div><%= @best_seller.prod_categorie.name %></div>
+        <div><%= @best_seller.prod_type.name %></div>
+        <div><%= @best_seller.supplier.name %></div>
+      </div>
+    </div>
+    <div class="good_seller">
+      <% @ninki_product.each do |prod| %>
+        <div class="gs_prod">
+          <div class="prod_head">
+            <%= prod.name %>
+          </div>
+          <div class="prod_body">
+            <div><%= prod.price %> $</div>
+            <div><%= prod.prod_categorie.name %></div>
+            <div><%= prod.prod_type.name %></div>
+            <div><%= prod.supplier.name %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="last_chance_title">
+    Soon sold out
   </div>
   <div class="last_chance_product">
-    Display products that will be  soon out of stock
+    <% @soon_sold_out.each do |prod| %>
+      <div class="ls_prod">
+        <div class="prod_head">
+          <%= prod.name %>
+        </div>
+        <div class="prod_body">
+          <div><%= prod.price %> $</div>
+          <div><%= prod.prod_categorie.name %></div>
+          <div><%= prod.prod_type.name %></div>
+          <div><%= prod.supplier.name %></div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
