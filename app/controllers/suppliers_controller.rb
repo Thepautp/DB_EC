@@ -3,7 +3,7 @@ class SuppliersController < ApplicationController
   end
 
   def show
-    id = params[:format].empty? ? params[:id] : params[:format]
-    @supplier = Supplier.find_by(id: id)
+    # id = params[:format].empty? ? params[:id] : params[:format]
+    @supplier = Supplier.find_by(params[:id])
   end
 end
