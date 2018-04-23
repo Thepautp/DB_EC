@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'products/index'
 
   get 'products/show'
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   get 'customers/index', to: "customers#index"
 
   get 'customers/show'
-
+  
+  get 'categorie/:type', to: "prod_types#show", as: "type"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

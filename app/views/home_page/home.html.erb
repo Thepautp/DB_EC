@@ -6,7 +6,7 @@
           <%= c.name %>
           <div class="dropdown_type">
             <% c.prod_types.each do |t| %>
-              <%= link_to t.name, products_index_path(t) %>
+              <%= link_to t.name, type_path(t) %>
             <% end %>
           </div>
         </th>
