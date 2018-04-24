@@ -32,18 +32,29 @@
 en:
   hello_you: "Hello you"
   home: "Home"
-  prod_price: "£%{price}"
+  prod_price_format: "£%{price}"
   result_count: {
     zero: "no result",
     one: "one result",
     other: "%{count} results"
   }
+  prod_name: "name"
+  prod_price: "price"
+  prod_stock: "stock"
+  prod_weight: "weight"
+  prod_supplier: "supplier name"
+  
 fr:
   hello_you: "Salut toi"
   home: "Menu"
-  prod_price: "%{price}€ "
+  prod_price_format: "%{price}€ "
   result_count: {
     zero: "pas de résultat",
     one: "un résultat",
     other: "%{count} résultats"
   }
+  prod_name: "nom"
+  prod_price: "prix"
+  prod_stock: "stock"
+  prod_weight: "poids"
+  prod_supplier: "fournisseur"
