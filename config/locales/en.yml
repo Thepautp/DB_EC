@@ -28,6 +28,22 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
+fr:
+  hello_you: "Salut toi"
+  home: "Menu"
+  prod_price_format: "%{price}€ "
+  result_count: {
+    zero: "pas de résultat",
+    one: "un résultat",
+    other: "%{count} résultats"
+  }
+  prod_name: "nom"
+  prod_price: "prix"
+  prod_stock: "stock"
+  prod_weight: "poids"
+  prod_supplier: "fournisseur"
+  fuken: "préfecture"
+  
 
 en:
   hello_you: "Hello you"
@@ -44,22 +60,6 @@ en:
   prod_weight: "weight"
   prod_supplier: "supplier name"
   fuken: "prefecture"
-  
-fr:
-  hello_you: "Salut toi"
-  home: "Menu"
-  prod_price_format: "%{price}€ "
-  result_count: {
-    zero: "pas de résultat",
-    one: "un résultat",
-    other: "%{count} résultats"
-  }
-  prod_name: "nom"
-  prod_price: "prix"
-  prod_stock: "stock"
-  prod_weight: "poids"
-  prod_supplier: "fournisseur"
-  fuken: "préfecture"
   
 jp:
   fuken: "府県"
