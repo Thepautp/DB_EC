@@ -1,12 +1,12 @@
 <div class="products_show_wrap">
   <table class="first_table">
     <tr>      
-        <th>Name</th>
-        <th>price</th>
-        <th>stock</th>
-        <th>weight</th>
-        <th>categorie</th>
-        <th>type</th>
+      <th><%= t(:prod_name)%></th>
+      <th><%= t(:prod_price)%></th>
+      <th><%= t(:prod_stock)%></th>
+      <th><%= t(:prod_weight)%></th>
+      <th>categorie</th>
+      <th>type</th>
     </tr>  
     <tr class="product_td">
       <td><%= @product.name %></td>
@@ -19,9 +19,9 @@
   </table>
   <table class="second_table">
     <tr>      
-        <th>Name</th>
+        <th><%= t(:prod_name)%></th>
         <th>email</th>
-        <th>fuken</th>
+        <th><%= t(:fuken)%></th>
         <th>ZIP</th>
         <th>address</th>
     </tr>

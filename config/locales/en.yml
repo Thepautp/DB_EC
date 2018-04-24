@@ -43,6 +43,7 @@ en:
   prod_stock: "stock"
   prod_weight: "weight"
   prod_supplier: "supplier name"
+  fuken: "prefecture"
   
 fr:
   hello_you: "Salut toi"
@@ -58,3 +59,9 @@ fr:
   prod_stock: "stock"
   prod_weight: "poids"
   prod_supplier: "fournisseur"
+  fuken: "préfecture"
+  
+jp:
+  fuken: "府県"
+  
+  
