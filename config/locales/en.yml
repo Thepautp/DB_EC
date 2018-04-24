@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello_you: "Hello you"
+  home: "Home"
+  prod_price: "£%{price}"
+  
+fr:
+  hello_you: "Salut toi"
+  home: "Menu"
+  prod_price: "%{price}€ "

@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   
   
   def set_locale
-    I18n.locale = extract_locale_from_tld || I18n.default_locale
+    I18n.locale = params[:locale] || I18n.default_locale
     p"Locale set: #{I18n.locale}"
   end
   def default_url_options
-    { lang: I18n.locale }
+    { locale: I18n.locale }
   end
  
   # Get locale from top-level domain or return +nil+ if such locale is not available

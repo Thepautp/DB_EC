@@ -8,6 +8,7 @@ class HomePageController < ApplicationController
     @ninki_product = all_ninki_product
     products = Product.find(ordered_products)
     @soon_sold_out = products.delete_if {|prod| prod.stock >=5 || prod.stock == 0}
+    @message = t(:hello_you)
   end
 end
  

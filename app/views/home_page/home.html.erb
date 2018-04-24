@@ -1,4 +1,5 @@
 <div class="home_wrap">  
+  <p><%= @message %></p>
   <table class="ecc_table">
     <tr class="dropdown">
       <% @categories.each_with_index do |c,i| %>
@@ -22,7 +23,7 @@
         <%= @best_seller.name %>
       </div>
       <div class="prod_body">
-        <div><%= @best_seller.price %> $</div>
+        <div><%= t('prod_price', price: @best_seller.price) %></div>
         <div><%= @best_seller.prod_categorie.name %></div>
         <div><%= @best_seller.prod_type.name %></div>
         <div><%= @best_seller.supplier.name %></div>
@@ -35,7 +36,7 @@
             <%= prod.name %>
           </div>
           <div class="prod_body">
-            <div><%= prod.price %> $</div>
+            <div><%= t('prod_price', price: @best_seller.price) %></div>
             <div><%= prod.prod_categorie.name %></div>
             <div><%= prod.prod_type.name %></div>
             <div><%= prod.supplier.name %></div>
