@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424064616) do
+ActiveRecord::Schema.define(version: 20180424070737) do
 
   create_table "customer_addresses", force: :cascade do |t|
     t.string "zip"
@@ -76,6 +76,16 @@ ActiveRecord::Schema.define(version: 20180424064616) do
     t.string "name"
     t.index ["locale"], name: "index_prod_category_translations_on_locale"
     t.index ["prod_category_id"], name: "index_prod_category_translations_on_prod_category_id"
+  end
+
+  create_table "prod_type_translations", force: :cascade do |t|
+    t.integer "prod_type_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["locale"], name: "index_prod_type_translations_on_locale"
+    t.index ["prod_type_id"], name: "index_prod_type_translations_on_prod_type_id"
   end
 
   create_table "prod_types", force: :cascade do |t|
