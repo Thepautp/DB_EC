@@ -29,7 +29,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 fr:
-  hello_you: "Salut toi"
   home: "Menu"
   prod_price_format: "%{price}€ "
   result_count: {
@@ -37,16 +36,19 @@ fr:
     one: "un résultat",
     other: "%{count} résultats"
   }
-  prod_name: "nom"
+  name_attr: "nom"
   prod_price: "prix"
   prod_stock: "stock"
   prod_weight: "poids"
   prod_supplier: "fournisseur"
+  categorie_attr: "catégorie"
+  type_attr: "type"
   fuken: "préfecture"
+  address: "address"
+  email_attr: "email"
   
 
 en:
-  hello_you: "Hello you"
   home: "Home"
   prod_price_format: "£%{price}"
   result_count: {
@@ -54,14 +56,34 @@ en:
     one: "one result",
     other: "%{count} results"
   }
-  prod_name: "name"
+  name_attr: "name"
   prod_price: "price"
   prod_stock: "stock"
   prod_weight: "weight"
   prod_supplier: "supplier name"
+  categorie_attr: "categorie"
+  type_attr: "type"
   fuken: "prefecture"
+  address: "adresse"
+  email_attr: "email"
   
 jp:
+  home: "漢字"
+  prod_price_format: "￥%{price}"
+  result_count: {
+    zero: "結果がない",
+    one: "1 結果",
+    other: "%{count} 結果"
+  }
+  name_attr: "名前"
+  prod_price: "価格"
+  prod_stock: "株式"
+  prod_weight: "重量"
+  prod_supplier: "供給者の名前"
+  categorie_attr: "カテゴリ"
+  type_attr: "タイプ"
   fuken: "府県"
+  address: "住所"
+  email_attr: "メール"
   
   

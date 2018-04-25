@@ -1,12 +1,12 @@
 <div class="products_show_wrap">
   <table class="first_table">
     <tr>      
-      <th><%= t(:prod_name)%></th>
+      <th><%= t(:name_attr)%></th>
       <th><%= t(:prod_price)%></th>
       <th><%= t(:prod_stock)%></th>
-      <th><%= t(:prod_weight)%></th>
-      <th>categorie</th>
-      <th>type</th>
+      <th><%= t(:prod_weight)%></th>categorie_attr
+      <th><%= t(:categorie_attr)%></th>
+      <th><%= t(:type_attr)%></th>
     </tr>  
     <tr class="product_td">
       <td><%= @product.name %></td>
@@ -19,11 +19,11 @@
   </table>
   <table class="second_table">
     <tr>      
-        <th><%= t(:prod_name)%></th>
-        <th>email</th>
+        <th><%= t(:name_attr)%></th>
+        <th><%= t(:email_attr)%></th>
         <th><%= t(:fuken)%></th>
         <th>ZIP</th>
-        <th>address</th>
+        <th><%= t(:address)%></th>
     </tr>
     <tr>
       <td><%= link_to @product.supplier.name, supplier_path(@product.supplier)%></td>

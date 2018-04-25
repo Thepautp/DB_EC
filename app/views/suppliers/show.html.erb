@@ -1,28 +1,28 @@
 <div class="supplier_wrap">
   <div class="supplier_info">
-    <p>name: <%= @supplier.name %></p>
+    <p><%= t(:name_attr)%>: <%= @supplier.name %></p>
     <p>email: <%= @supplier.email %></p>
     <p>zip: <%= @supplier.supplier_address.zip %></p>
-    <p>fuken: <%= @supplier.supplier_address.fuken.name %></p>
-    <p>address: <%= @supplier.supplier_address.addr_1 %></p>
-    <p>address: <%= @supplier.supplier_address.addr_2 %></p>    
+    <p><%= t(:fuken)%>: <%= @supplier.supplier_address.fuken.name %></p>
+    <p><%= t(:address)%>: <%= @supplier.supplier_address.addr_1 %></p>
+    <p><%= t(:address)%>: <%= @supplier.supplier_address.addr_2 %></p>    
   </div>
   <div class="supplier_product">
     <table class="sup_prod_table">
       <tr>
         <tr>      
-            <th>Name</th>
-            <th>price</th>
-            <th>stock</th>
-            <th>weight</th>
-            <th>categorie</th>
-            <th>type</th>
+          <th><%= t(:name_attr)%></th>
+          <th><%= t(:prod_price)%></th>
+          <th><%= t(:prod_stock)%></th>
+          <th><%= t(:prod_weight)%></th>
+          <th><%= t(:categorie_attr)%></th>
+          <th><%= t(:type_attr)%></th>
         </tr>  
       </tr>
     <% @supplier.products.each do |prod| %>
       <tr class="product_td">
         <td><%= prod.name %></td>
-        <td><%= prod.price %></td>
+        <td><%= t('prod_price_format', price: prod.price) %></td>
         <td><%= prod.stock %></td>
         <td><%= prod.weight %></td>
         <td><%= prod.prod_categorie.name %></td>
