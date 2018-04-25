@@ -11,3 +11,36 @@ suppliers.each do |s|
     s.products.create(name: product_name, prod_categorie_id: cat, prod_type_id: type, price: price, stock: stock, weight: weight) 
   end
 end
+Product.create(name: "product_name", prod_categorie_id: 1, prod_type_id: 2, price: 5.8, stock: 50, weight: 7.6, supplier_id: 8) 
+
+I18n.locale = :fr
+product = Product.all
+all_price = []
+product.each do |prod|
+  converted_price = prod.price * 0.84
+  converted_price.round(2)
+  all_price << converted_price
+end
+I18n.locale = :en
+product = Product.all
+product.each_with_index do |prod,i|
+  if i >= 140 && i < 156
+    prod.price = all_price[i]
+    prod.save
+  end
+end
+
+I18n.locale = :fr
+product = Product.all
+all_price = []
+product.each do |prod|
+  converted_price = prod.price * 130
+  converted_price.round(2)
+  all_price << converted_price
+end
+I18n.locale = :jp
+product = Product.all
+product.each_with_index do |prod,i|
+    prod.price = all_price[i]
+    prod.save
+end
