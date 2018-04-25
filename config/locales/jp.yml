@@ -1,0 +1,18 @@
+jp:
+  home: "漢字"
+  prod_price_format: "￥%{price}"
+  result_count: {
+    zero: "結果がない",
+    one: "1 結果",
+    other: "%{count} 結果"
+  }
+  name_attr: "名前"
+  prod_price: "価格"
+  prod_stock:  "株式"
+  prod_weight: "重量"
+  prod_supplier: "供給者の名前"
+  categorie_attr: "カテゴリ"
+  type_attr: "タイプ"
+  fuken: "府県"
+  address: "住所"
+  email_attr: "メール"

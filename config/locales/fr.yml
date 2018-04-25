@@ -1,0 +1,18 @@
+fr:
+  home: "Menu"
+  prod_price_format: "%{price}€ "
+  result_count: {
+    zero: "pas de résultat",
+    one: "un résultat",
+    other: "%{count} résultats"
+  }
+  name_attr: "nom"
+  prod_price: "prix"
+  prod_stock: "stock"
+  prod_weight: "poids"
+  prod_supplier: "fournisseur"
+  categorie_attr: "catégorie"
+  type_attr: "type"
+  fuken: "préfecture"
+  address: "address"
+  email_attr: "email"
