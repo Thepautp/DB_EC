@@ -49,3 +49,8 @@ en:
   email_attr: "email"
   best_seller: "Best seller"
   sold_out: "Soon sold out"
+  languages:
+    lang: "languages"
+    fr: "FR"
+    en: "GB"
+    jp: "JP"

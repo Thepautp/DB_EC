@@ -31,3 +31,9 @@ th,td,tr {
 .logo {
   text-align: center;
 }
+.dropdown-menu{
+  display: inline-block;
+}
+.dropdown-menu li{
+  display: inline-block;
+}

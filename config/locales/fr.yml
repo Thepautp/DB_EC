@@ -18,3 +18,8 @@ fr:
   email_attr: "email"
   best_seller: "Meilleures ventes"
   sold_out: "Bientôt en rupture de stock"
+  languages:
+    lang: "Langues"
+    fr: "FR"
+    en: "GB"
+    jp: "JP"

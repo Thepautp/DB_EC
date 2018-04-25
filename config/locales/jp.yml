@@ -18,3 +18,8 @@ jp:
   email_attr: "メール"
   best_seller: "ベスト・セラー"
   sold_out: "すぐに売り切れた"
+  languages:
+    lang: "言語"
+    fr: "フランス語"
+    en: "英語"
+    jp: "日本語"
