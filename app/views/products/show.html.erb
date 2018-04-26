@@ -33,4 +33,14 @@
       <td><%= @product.supplier.supplier_address.addr_1 %> <%= @product.supplier.supplier_address.addr_2 %></td>
     </tr>  
   </table>
+  <div class="add_cart_wrap">
+    <%= form_for(:product, url: carts_create_path) do |f| %>
+      <div class="cart_label">
+        <%= f.select :quantity,  options_for_select() %>
+      </div>
+      <div class="cart_submit">
+        
+      </div>
+    <% end %>
+  </div>
 </div>

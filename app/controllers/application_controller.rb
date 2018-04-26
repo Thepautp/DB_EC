@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
     @cart = Cart.find_by_id(session[:cart_id])
     p @cart
     unless @cart
+      # TODO: error when no loggin, create default customer_id when no loggin
       @cart = Cart.create(customer_id: session[:customer_id])
       session[:cart_id] = @cart.id
     end

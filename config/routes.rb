@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'carts/create'
+  get 'carts/create', to: "carts#create"
 
   get 'carts/destroy'
 
