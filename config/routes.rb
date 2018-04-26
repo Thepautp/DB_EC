@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   root 'home_page#home'
   
   get 'home_page/home'
+  
+  post 'login', to: "sessions#create"
 
   get 'suppliers/index', to: "suppliers#index"
 

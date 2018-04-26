@@ -5,16 +5,18 @@
         Log in <span>▼</span>
       </a>
       <div id="login-content">
-        <form>
+        <%= form_for(:session, url: login_path) do |f|%>
           <fieldset id="inputs">
-            <input id="username" type="email" name="Email" placeholder="Your email address" required>   
-            <input id="password" type="password" name="Password" placeholder="Password" required>
+            <%= f.email_field :email, id: "username",placeholder: "Your email address" %>
+            <!-- <input id="username" type="email" name="Email" placeholder="Your email address" required>    -->
+            <%= f.password_field :email, id: "password",placeholder: "password" %>
+            <!-- <input id="password" type="password" name="Password" placeholder="Password" required> -->
           </fieldset>
           <fieldset id="actions">
             <input type="submit" id="submit" value="Log in">
             <label><input type="checkbox" checked="checked"> Keep me signed in</label>
           </fieldset>
-        </form>
+        <% end %>
       </div>
     </li>
     <li id="submit">
