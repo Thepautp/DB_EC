@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_action :set_locale
+  before_action :set_locale, :set_cart
   
   
   def set_locale
@@ -15,5 +15,16 @@ class ApplicationController < ActionController::Base
   end
   def default_url_options
       { locale: I18n.locale }
+  end
+  
+  private
+  
+  def set_cart
+    @cart = Cart.find_by_id(session[:cart_id])
+    p @cart
+    unless @cart
+      @cart = Cart.create(customer_id: session[:customer_id])
+      session[:cart_id] = @cart.id
+    end
   end
 end
