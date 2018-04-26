@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'home_page/home'
   
   post 'login', to: "sessions#create"
+  
+  delete 'logout', to: "sessions#destroy"
 
   get 'suppliers/index', to: "suppliers#index"
 

@@ -1,7 +1,8 @@
 module SessionsHelper
   
   def log_in(customer)
-    session[:customer_id] = customer_id.id
+    p customer.id
+    session[:customer_id] = customer.id
   end
   
   def current_user

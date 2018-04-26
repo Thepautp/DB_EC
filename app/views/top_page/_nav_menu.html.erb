@@ -1,24 +1,30 @@
 <nav>
   <ul>
-    <li id="login">
-      <a id="login-trigger" href="#">
-        Log in <span>▼</span>
-      </a>
-      <div id="login-content">
-        <%= form_for(:session, url: login_path) do |f|%>
-          <fieldset id="inputs">
-            <%= f.email_field :email, id: "username",placeholder: "Your email address" %>
-            <!-- <input id="username" type="email" name="Email" placeholder="Your email address" required>    -->
-            <%= f.password_field :email, id: "password",placeholder: "password" %>
-            <!-- <input id="password" type="password" name="Password" placeholder="Password" required> -->
-          </fieldset>
-          <fieldset id="actions">
-            <input type="submit" id="submit" value="Log in">
-            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
-          </fieldset>
-        <% end %>
-      </div>
-    </li>
+    <% unless logged_in? %>
+      <li id="login">
+        <a id="login-trigger" href="#">
+          Log in <span>▼</span>
+        </a>
+        <div id="login-content">
+          <%= form_for(:session, url: login_path) do |f|%>
+            <fieldset id="inputs">
+              <%= f.email_field :email, id: "username",placeholder: "Your email address" %>
+              <!-- <input id="username" type="email" name="Email" placeholder="Your email address" required>    -->
+              <%= f.password_field :password, id: "password",placeholder: "password" %>
+              <!-- <input id="password" type="password" name="Password" placeholder="Password" required> -->
+            </fieldset>
+            <fieldset id="actions">
+              <input type="submit" id="submit" value="Log in">
+              <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+            </fieldset>
+          <% end %>
+        </div>
+      </li>
+    <% else %>
+      <li id="logout">
+        <%= link_to "Log out", logout_path, method: :delete %>
+      </li>
+    <% end %>
     <li id="submit">
       <%= link_to "Submit", home_page_home_path, method: :get %>
     </li>
